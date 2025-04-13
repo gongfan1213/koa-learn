@@ -1,0 +1,40 @@
+{
+  "name": "diudiu",
+  "version": "0.0.1",
+  "description": "node ",
+  "main": "index.js",
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "rm -rf test/.temp/* && mocha --exit -t=10000 'test/**/*.spec.js'",
+    "dev": "cross-env NODE_ENV=development nodemon -e ts,ejs --exec ts-node -T ./example/app.ts",
+    "lerna": "npx lerna bootstrap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SKHon/diudiu.git"
+  },
+  "author": "liujianghong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SKHon/diudiu/issues"
+  },
+  "homepage": "https://github.com/SKHon/diudiu#readme",
+  "dependencies": {
+    "koa": "^2.13.3",
+    "lerna": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.10.3",
+    "chai": "^4.3.4",
+    "cross-env": "^7.0.3",
+    "mocha": "^9.1.2",
+    "nodemon": "^2.0.13",
+    "supertest": "^6.1.6"
+  },
+  "engines": {
+    "node": ">=10 <16"
+  }
+}
